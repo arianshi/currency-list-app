@@ -16,7 +16,12 @@ export default function App() {
   return (
     <CurrencyProvider>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{
+          headerStyle: {
+            backgroundColor: 'rgb(13,19,37)',
+          },
+          headerTintColor: '#fff',
+        }} >
           <Stack.Screen name="Demo" component={DemoScreen} />
           <Stack.Screen name="CurrencyList" component={CurrencyListScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
