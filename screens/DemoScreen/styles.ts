@@ -4,12 +4,13 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		padding: 24,
-		backgroundColor: '#fff',
+		backgroundColor: 'rgb(13,19,37)',
 	},
 	title: {
 		fontSize: 20,
 		fontWeight: 'bold',
 		marginBottom: 24,
+		color: '#fff',
 	},
 	button: {
 		backgroundColor: '#eee',
