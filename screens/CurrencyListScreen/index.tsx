@@ -1,5 +1,5 @@
 import React from 'react';
-import CurrencyListModule from 'react-native-currency-lists';
+import CurrencyListModule from 'react-native-currency-list';
 import { useCurrency } from '../../context/currencyContext';
 
 const CurrencyListScreen = () => {
