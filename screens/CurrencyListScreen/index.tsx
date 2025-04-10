@@ -5,7 +5,6 @@ import { useCurrency } from '../../context/currencyContext';
 const CurrencyListScreen = () => {
   const { data } = useCurrency();
   return <CurrencyListModule metadata={{ data }} />;
-
 };
 
 export { CurrencyListScreen };

@@ -1,11 +1,11 @@
-type CurrencyInfo = {
+export type CurrencyItem = {
 	id: string;
 	name: string;
 	symbol: string;
-	code?: string;
-};
+	code?: string
+  };
 
-export const cryptoList: CurrencyInfo[] = [
+export const cryptoList: CurrencyItem[] = [
 	{ id: 'BTC', name: 'Bitcoin', symbol: 'BTC' },
 	{ id: 'ETH', name: 'Ethereum', symbol: 'ETH' },
 	{ id: 'XRP', name: 'XRP', symbol: 'XRP' },
@@ -22,7 +22,7 @@ export const cryptoList: CurrencyInfo[] = [
 	{ id: 'USDC', name: 'USD Coin', symbol: 'USDC' },
   ];
 
-  export const fiatList: CurrencyInfo[] = [
+  export const fiatList: CurrencyItem[] = [
 	{ id: 'SGD', name: 'Singapore Dollar', symbol: '$', code: 'SGD' },
 	{ id: 'EUR', name: 'Euro', symbol: '€', code: 'EUR' },
 	{ id: 'GBP', name: 'British Pound', symbol: '£', code: 'GBP' },

@@ -1,15 +1,9 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-
-export type CurrencyItem = {
-	id: string;
-	name: string;
-	symbol: string;
-	code?: string
-  };
+import { CurrencyItem } from '../../db';
 
   type CurrencyContextType = {
 	data: CurrencyItem[];
-	setData: (data: CurrencyItem[]) => void;
+	setData: React.Dispatch<React.SetStateAction<CurrencyItem[]>>;
   };
 
   const CurrencyContext = createContext<CurrencyContextType | undefined>(undefined);
