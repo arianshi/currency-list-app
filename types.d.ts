@@ -1,1 +1,1 @@
-declare module 'react-native-currency-lists'
+declare module 'react-native-currency-list'
