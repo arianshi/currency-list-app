@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../../App';
-import { cryptoList, fiatList } from '../../db/index';
+import { cryptoList, fiatList, CurrencyItem } from '../../db/index';
 import { useCurrency } from '../../context/currencyContext';
 
 import styles from './styles';
@@ -20,9 +20,21 @@ const DemoScreen = () => {
         Alert.alert('Data cleared');
         break;
       case 'Insert Data':
-        setData([...cryptoList, ...fiatList]);
-        Alert.alert('Data inserted');
+        setData((prev) => {
+          const all = [...cryptoList, ...fiatList];
+          const remaining = all.filter(item => !prev.some(existing => existing.id === item.id));
+
+          if (remaining.length === 0) {
+            Alert.alert('All items already inserted');
+            return prev;
+          }
+
+          const randomItem = remaining[Math.floor(Math.random() * remaining.length)];
+          Alert.alert('Inserted one item:', randomItem.id);
+          return [...prev, randomItem];
+        });
         break;
+
       case 'Show Crypto':
         setData(cryptoList);
         Alert.alert('Crypto data loaded');
