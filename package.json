@@ -1,5 +1,5 @@
 {
-  "name": "CurrencyListApp",
+  "name": "currency-list-app",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest -coverge --all"
   },
   "dependencies": {
     "@react-navigation/native": "7.1.4",
@@ -32,6 +32,7 @@
     "@react-native/eslint-config": "0.78.2",
     "@react-native/metro-config": "0.78.2",
     "@react-native/typescript-config": "0.78.2",
+    "@testing-library/react-native": "^13.2.0",
     "@types/jest": "^29.5.13",
     "@types/react": "^19.0.0",
     "@types/react-test-renderer": "^19.0.0",
