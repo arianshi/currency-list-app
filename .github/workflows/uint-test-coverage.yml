@@ -1,0 +1,47 @@
+name: uint-test
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  generate-frontend-coverage:
+    name: coverage
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            **/node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Run Jest tests with coverage
+        run: yarn run test --coverage
+
+      - name: Report Jest coverage to PR
+        uses: adRise/jest-cov-reporter@main
+        with:
+          branch-coverage-report-path: ./coverage/coverage-summary.json
+          base-coverage-report-path: ./coverage/coverage-summary.json
+          accessToken: ${{ secrets.GITHUB_TOKEN }}
+          fullCoverageDiff: false
+          delta: 0.2
+          useSameComment: true
+          only-check-changed-files: true
+          check-new-file-full-coverage: true
+          coverageType: jest
