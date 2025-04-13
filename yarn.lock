@@ -5988,10 +5988,10 @@ react-is@^19.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-19.1.0.tgz#805bce321546b7e14c084989c77022351bbdd11b"
   integrity sha512-Oe56aUPnkHyyDxxkvqtd7KkdQP5uIUfHxd5XTb3wE9d/kRnZLmKbDB0GWk919tdQ+mxxPtG6EAs6RMT6i1qtHg==
 
-react-native-currency-list@0.1.9:
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/react-native-currency-list/-/react-native-currency-list-0.1.9.tgz#092e59e866a32dd2b0b5613f597fccf46e10ea65"
-  integrity sha512-mhKMBqu1K/SOkITSXX4ORpvmZmhanvOiPfv8ezf0sxMKxJO1gByw4kwlEFW7qSIvnoVEE48fLA1INM2/GFDZWg==
+react-native-currency-list@0.1.10:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/react-native-currency-list/-/react-native-currency-list-0.1.10.tgz#35cc64f3aa84716e1e56346c5853caf9a79f8d7d"
+  integrity sha512-m6PiEZUFtmhJj7+WKNPQIjaJhQS5/Mlj11lzHrwdYzLPLWMyUPWh32bz0V3cq6wWx7p85KfWth7FbX5WmVeIuQ==
   dependencies:
     "@react-navigation/native" "7.1.4"
     "@react-navigation/native-stack" "7.3.8"
